@@ -1,0 +1,26 @@
+<div class="major-container">
+    <button style="" (click)="reset()">Reset</button>
+    <div class="img-container">
+        <div class="img-panel case {{!isImageCaseEmpty ? 'disabled' : ''}}">
+            <h1 *ngIf="isImageCaseEmpty">Paste from your clipboard</h1>
+            <img [src]="imageCase" />
+        </div>
+
+        <div class="img-panel solution  {{!isImageSolutionEmpty ? 'disabled' : ''}}">
+            <h1 *ngIf="!isImageCaseEmpty&&isImageSolutionEmpty">Paste from your clipboard</h1>
+            <img [src]="imageSolution" />
+        </div>
+    </div>
+    <div style="margin-top: 30px;">
+        <label>Select topics</label><br>
+        <div *ngFor="let topic of topicsService.topics" class="topic-badge {{ isSelectedTopic(topic) && 'selected' }}"
+            (click)="selectTopic(topic)">
+            {{topic}}
+        </div>
+    </div>
+
+    <div class="btn-panel">
+        <button (click)="cancel()" class="btn-action" style="background-color: #d5d5d5;">Cancel</button>
+        <button (click)="postStory()" class="btn-action">Post</button>
+    </div>
+</div>

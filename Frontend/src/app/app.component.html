@@ -1,0 +1,33 @@
+<div class="fixed-container" *ngIf="isOnAdd">
+    <div class="btn-close" (click)="isOnAdd=false">X</div>
+    <app-add-story (onCancel)="isOnAdd=false"></app-add-story>
+</div>
+
+<div style="text-align: center;">
+    <button class="btn-action btn-add-story" *ngIf="!isOnAdd" (click)="isOnAdd=true">Add story</button>
+</div>
+
+<div style="max-width: 900px;margin: auto;">
+    <div *ngFor="let story of stories$ | async">
+        <div class="img-container">
+            <div class="badge-container">
+                <div *ngFor="let topic of story.topicsArr" class="topic-badge">
+                    {{topic}}
+                </div>
+                <label style="padding: 5px; font-size: 10px;">{{story.date | date :'hh:mm dd.MMM'}}</label>
+            </div>
+
+            <div class="img-panel case">
+                <img [src]="story.imgCase" />
+            </div>
+
+            <div class="img-panel solution">
+                <img [src]="story.imgSolution" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<app-loading></app-loading>

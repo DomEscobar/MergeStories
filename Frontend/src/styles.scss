@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: monospace;
+    margin: 0px;
+}
+
+.topic-badge {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: lightgray;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.selected {
+        background-color: aquamarine;
+    }
+}
+
+.btn-action {
+    background-color: #5cffd8;
+    padding: 10px 25px;
+    min-width: 150px;
+    box-shadow: 1px 4px 20px #c7c7c7;
+    border: 1px solid #10867b;
+    cursor: pointer;
+
+    :hover {
+        background-color: #10967b;
+    }
+}
+
+.img-container {
+    display: flex;
+
+    .img-panel {
+        flex: 1;
+        text-align: center;
+        margin: 5px;
+        box-shadow: 2px 20px 20px 0px #dfdfdf;
+
+        img {
+            width: 100%;
+            max-height: 300px;
+        }
+    }
+
+
+    .disabled {
+        /** creative **/
+    }
+
+    .case {
+        border: 3px solid #ff7e7e;
+    }
+    
+    .solution {
+        border: 3px solid #a0d8ff;
+    }
+}
+

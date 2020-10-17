@@ -1,0 +1,64 @@
+.stories-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.zoom-hover {
+    zoom: 0.5;
+
+    &:hover {
+        zoom: 1;
+    }
+}
+
+.fixed-container {
+    position: fixed;
+    z-index: 1;
+    box-shadow: 1px 1px 10px gray;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+
+    .btn-close {
+        padding: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        float: right;
+        font-size: 16px;
+    }
+}
+
+.btn-add-story {
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: aquamarine;
+}
+
+.topic-badge {
+    display: block;
+    font-size: 9px;
+    margin: 5px;
+}
+.img-container {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .img-container {
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .badge-container {
+        width: 100%;
+
+        .topic-badge {
+            display: inline-block;
+            font-size: 8px;
+        }
+    }
+}
